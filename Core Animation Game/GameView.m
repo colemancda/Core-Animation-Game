@@ -75,7 +75,10 @@
             // set the new frame
             CGRect newFrame;
             newFrame.origin = sprite.position;
-            newFrame.size = CGSizeMake(CGImageGetWidth(newImage), CGImageGetHeight(newImage));
+            
+            // get the scale (Retina support)
+            float scale = [UIScreen mainScreen].scale;
+            newFrame.size = CGSizeMake(CGImageGetWidth(newImage) / scale, CGImageGetHeight(newImage) / scale);
             sprite.frame = newFrame;
         }
     }
