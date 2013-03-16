@@ -54,7 +54,7 @@
     _level = level;
     
     // start animations
-    [self.gameView startAnimationWithTimeInterval:0];
+    [self.gameView startAnimation];
     
 }
 

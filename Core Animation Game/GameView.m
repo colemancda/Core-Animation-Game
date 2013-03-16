@@ -86,18 +86,14 @@
     }
 }
 
--(void)startAnimationWithTimeInterval:(NSTimeInterval)time
+-(void)startAnimation
 {
-    // if no time is set default to 60 FPS
-    if (!time) {
-        time = 1.0/60.0;
-    }
+    _timer = [CADisplayLink displayLinkWithTarget:self
+                                         selector:@selector(reloadData)];
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:time
-                                              target:self
-                                            selector:@selector(reloadData)
-                                            userInfo:nil
-                                             repeats:YES];
+    [_timer addToRunLoop:[NSRunLoop mainRunLoop]
+                 forMode:NSDefaultRunLoopMode];
+
 }
 
 -(void)stopAnimation

@@ -12,7 +12,7 @@
 
 @interface GameView : UIView
 {
-    NSTimer *_timer;
+    CADisplayLink *_timer;
     
     NSArray *_gameSprites;
 }
@@ -21,7 +21,7 @@
 
 -(void)reloadData;
 
--(void)startAnimationWithTimeInterval:(NSTimeInterval)time;
+-(void)startAnimation;
 
 -(void)stopAnimation;
 

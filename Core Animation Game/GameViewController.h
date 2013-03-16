@@ -16,8 +16,7 @@
 {
     Level *_level;
     
-    cpSpace *_space;
-    
+    ChipmunkSpace *_space;
     
 }
 
