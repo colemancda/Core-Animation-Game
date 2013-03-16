@@ -36,7 +36,6 @@
 		6E1C8EDD16F2B0DE0090FAD1 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1C8ED716F2B0DE0090FAD1 /* coin.png */; };
 		6E1C8EE016F2B1060090FAD1 /* CASprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C8EDF16F2B1050090FAD1 /* CASprite.m */; };
 		6E1C8EE416F2B30E0090FAD1 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C8EE316F2B30E0090FAD1 /* GameObject.m */; };
-		6E1C8EE816F2DB430090FAD1 /* Chipmunk-iPhone in Resources */ = {isa = PBXBuildFile; fileRef = 6E1C8EE716F2DB430090FAD1 /* Chipmunk-iPhone */; };
 		6EEA44F616F4C1D4007E40BA /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA44F516F4C1D4007E40BA /* GameView.m */; };
 		6EEA44F816F4EF08007E40BA /* ChipmunkPro-iPhone-Trial in Resources */ = {isa = PBXBuildFile; fileRef = 6EEA44F716F4EF08007E40BA /* ChipmunkPro-iPhone-Trial */; };
 /* End PBXBuildFile section */
@@ -79,7 +78,6 @@
 		6E1C8EDF16F2B1050090FAD1 /* CASprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASprite.m; sourceTree = "<group>"; };
 		6E1C8EE216F2B30E0090FAD1 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		6E1C8EE316F2B30E0090FAD1 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
-		6E1C8EE716F2DB430090FAD1 /* Chipmunk-iPhone */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Chipmunk-iPhone"; sourceTree = SOURCE_ROOT; };
 		6EEA44F416F4C1D4007E40BA /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
 		6EEA44F516F4C1D4007E40BA /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
 		6EEA44F716F4EF08007E40BA /* ChipmunkPro-iPhone-Trial */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ChipmunkPro-iPhone-Trial"; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				6EEA44F716F4EF08007E40BA /* ChipmunkPro-iPhone-Trial */,
-				6E1C8EE716F2DB430090FAD1 /* Chipmunk-iPhone */,
 				6E1C8EB916F2AA9A0090FAD1 /* QuartzCore.framework */,
 				6E1C8E9616F2A9640090FAD1 /* UIKit.framework */,
 				6E1C8E9816F2A9640090FAD1 /* Foundation.framework */,
@@ -281,7 +278,6 @@
 				6E1C8EDB16F2B0DE0090FAD1 /* block_grey_plain.png in Resources */,
 				6E1C8EDC16F2B0DE0090FAD1 /* cloud_1.png in Resources */,
 				6E1C8EDD16F2B0DE0090FAD1 /* coin.png in Resources */,
-				6E1C8EE816F2DB430090FAD1 /* Chipmunk-iPhone in Resources */,
 				6EEA44F816F4EF08007E40BA /* ChipmunkPro-iPhone-Trial in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

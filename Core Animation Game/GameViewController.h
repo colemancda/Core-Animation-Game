@@ -15,9 +15,6 @@
 @interface GameViewController : UIViewController <GameViewDataSourceProtocol>
 {
     Level *_level;
-    
-    ChipmunkSpace *_space;
-    
 }
 
 @property (strong, nonatomic) IBOutlet GameView *gameView;
