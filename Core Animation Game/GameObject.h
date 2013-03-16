@@ -12,7 +12,6 @@
 
 @property CGPoint position;
 
-@property CGImageRef image;
-
+@property NSString *imageFileName;
 
 @end

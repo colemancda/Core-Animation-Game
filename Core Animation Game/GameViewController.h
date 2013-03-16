@@ -14,12 +14,12 @@
 
 @interface GameViewController : UIViewController <GameViewDataSourceProtocol>
 {
-    NSMutableArray *_gameObjects;
+    Level *_level;
+    
+    cpSpace *_space;
 }
 
 @property (strong, nonatomic) IBOutlet GameView *gameView;
-
-@property cpSpace *space;
 
 -(void)loadLevel:(Level *)level;
 

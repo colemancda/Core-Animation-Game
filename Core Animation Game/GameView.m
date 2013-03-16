@@ -7,7 +7,7 @@
 //
 
 #import "GameView.h"
-#import "CASprite.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation GameView
 
@@ -40,7 +40,7 @@
         for (NSInteger i = 0; i < objectCount; i++) {
             
             // create sprite
-            CASprite *sprite = [CASprite layer];
+            CALayer *sprite = [CALayer layer];
             
             // add to array
             [tempMutArray addObject:sprite];
@@ -48,13 +48,14 @@
             // add as sublayer
             [self.layer addSublayer:sprite];
             
-            // set the array to load the data for
-            _gameSprites = tempMutArray.copy;
         }
+        
+        // set the array to load the data for
+        _gameSprites = tempMutArray.copy;
     }
     
     // update the properties of the sprites
-    for (CASprite *sprite in _gameSprites) {
+    for (CALayer *sprite in _gameSprites) {
         
         // get index
         NSInteger index = [_gameSprites indexOfObject:sprite];
@@ -68,7 +69,14 @@
                                imageOfGameObjectAtIndex:index];
         
         if (sprite.contents != (__bridge id)(newImage)) {
+            // set the new image
             sprite.contents = (__bridge id)(newImage);
+            
+            // set the new frame
+            CGRect newFrame;
+            newFrame.origin = sprite.position;
+            newFrame.size = CGSizeMake(CGImageGetWidth(newImage), CGImageGetHeight(newImage));
+            sprite.frame = newFrame;
         }
     }
 }

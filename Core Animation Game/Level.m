@@ -10,5 +10,16 @@
 
 @implementation Level
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+        _objects = [[NSMutableArray alloc] init];
+        
+    }
+    return self;
+}
+
 
 @end
