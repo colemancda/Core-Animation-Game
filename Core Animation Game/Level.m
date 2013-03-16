@@ -7,11 +7,16 @@
 //
 
 #import "Level.h"
-#import "../ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
+#import "ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
+#import "GameObject.h"
+
+NSString *const kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType";
 
 @implementation Level
 
-- (id)init
+#pragma mark - Initialization
+
+- (id)initWithSpaceBounds:(CGRect)bounds
 {
     self = [super init];
     if (self) {
@@ -21,23 +26,29 @@
         // create the chipmunk space
         _space = [[ChipmunkSpace alloc] init];
         
-        [_space addBounds:[UIScreen mainScreen]
+        [_space addBounds:bounds
                 thickness:10
-               elasticity:1
+               elasticity:0
                  friction:1
                    layers:CP_ALL_LAYERS
                     group:CP_NO_GROUP
             collisionType:kSpaceBoundingBoxCollisionType];
         
-        // add the game objects
-        for (GameObject *gameObject in level.objects) {
-            
-            
-        }
+        _space.gravity = CGPointMake(0.0, 10);
         
     }
     return self;
 }
+
+- (id)init
+{
+    self = [self initWithSpaceBounds:[UIScreen mainScreen].bounds];
+    return self;
+}
+
+
+#pragma mark
+
 
 
 @end

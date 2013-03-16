@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
 #import "GameView.h"
+#import "ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
 @class Level;
 
 

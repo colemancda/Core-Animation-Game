@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "../ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
+#import "ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
 
 @interface Level : NSObject
 {

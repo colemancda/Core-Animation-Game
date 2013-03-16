@@ -8,12 +8,10 @@
 
 #import "GameViewController.h"
 #import "CASprite.h"
-#import "../ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
+#import "ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
 #import "GameView.h"
 #import "Level.h"
 #import "GameObject.h"
-
-static NSString *kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType";
 
 @interface GameViewController ()
 
