@@ -59,8 +59,6 @@
 }
 
 
-
-
 #pragma mark - GameViewDataSource Protocol
 
 -(NSInteger)numberOfGameObjectsForGameView:(GameView *)gameView

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "../Chipmunk-iPhone/chipmunk.h"
+#import "../ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
 #import "GameView.h"
 @class Level;
 
@@ -17,6 +17,8 @@
     Level *_level;
     
     cpSpace *_space;
+    
+    
 }
 
 @property (strong, nonatomic) IBOutlet GameView *gameView;

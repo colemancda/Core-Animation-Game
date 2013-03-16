@@ -64,10 +64,11 @@
         sprite.position = [self.dataSource gameView:self
                         positionOfGameObjectAtIndex:index];
         
-        // set new image if image has changed
+        // get the image
         CGImageRef newImage = [self.dataSource gameView:self
                                imageOfGameObjectAtIndex:index];
         
+        // set new image if image has changed
         if (sprite.contents != (__bridge id)(newImage)) {
             // set the new image
             sprite.contents = (__bridge id)(newImage);
@@ -78,7 +79,8 @@
             
             // get the scale (Retina support)
             float scale = [UIScreen mainScreen].scale;
-            newFrame.size = CGSizeMake(CGImageGetWidth(newImage) / scale, CGImageGetHeight(newImage) / scale);
+            newFrame.size = CGSizeMake(CGImageGetWidth(newImage) / scale,
+                                       CGImageGetHeight(newImage) / scale);
             sprite.frame = newFrame;
         }
     }
