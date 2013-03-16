@@ -20,7 +20,6 @@
 		6E1C8EB716F2A98B0090FAD1 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1C8EB516F2A98B0090FAD1 /* GameViewController.xib */; };
 		6E1C8EBA16F2AA9A0090FAD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1C8EB916F2AA9A0090FAD1 /* QuartzCore.framework */; };
 		6E1C8EBD16F2AC970090FAD1 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C8EBC16F2AC960090FAD1 /* Level.m */; };
-		6E1C8EC016F2B0430090FAD1 /* libChipmunk-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1C8EBF16F2B0430090FAD1 /* libChipmunk-iPhone.a */; };
 		6E1C8EC916F2B09B0090FAD1 /* monkey_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1C8EC116F2B09B0090FAD1 /* monkey_1.png */; };
 		6E1C8ECA16F2B09B0090FAD1 /* object_backpack.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1C8EC216F2B09B0090FAD1 /* object_backpack.png */; };
 		6E1C8ECB16F2B09B0090FAD1 /* object_banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1C8EC316F2B09B0090FAD1 /* object_banana.png */; };
@@ -37,6 +36,8 @@
 		6E1C8EDD16F2B0DE0090FAD1 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E1C8ED716F2B0DE0090FAD1 /* coin.png */; };
 		6E1C8EE016F2B1060090FAD1 /* CASprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C8EDF16F2B1050090FAD1 /* CASprite.m */; };
 		6E1C8EE416F2B30E0090FAD1 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C8EE316F2B30E0090FAD1 /* GameObject.m */; };
+		6E1C8EE816F2DB430090FAD1 /* Chipmunk-iPhone in Resources */ = {isa = PBXBuildFile; fileRef = 6E1C8EE716F2DB430090FAD1 /* Chipmunk-iPhone */; };
+		6EEA44F616F4C1D4007E40BA /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA44F516F4C1D4007E40BA /* GameView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +60,6 @@
 		6E1C8EB916F2AA9A0090FAD1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6E1C8EBB16F2AC960090FAD1 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
 		6E1C8EBC16F2AC960090FAD1 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
-		6E1C8EBF16F2B0430090FAD1 /* libChipmunk-iPhone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libChipmunk-iPhone.a"; path = "../../3rd party projects/Chipmunk-Physics/xcode/Chipmunk-iPhone/libChipmunk-iPhone.a"; sourceTree = "<group>"; };
 		6E1C8EC116F2B09B0090FAD1 /* monkey_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey_1.png; sourceTree = "<group>"; };
 		6E1C8EC216F2B09B0090FAD1 /* object_backpack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object_backpack.png; sourceTree = "<group>"; };
 		6E1C8EC316F2B09B0090FAD1 /* object_banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object_banana.png; sourceTree = "<group>"; };
@@ -78,6 +78,9 @@
 		6E1C8EDF16F2B1050090FAD1 /* CASprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASprite.m; sourceTree = "<group>"; };
 		6E1C8EE216F2B30E0090FAD1 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		6E1C8EE316F2B30E0090FAD1 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		6E1C8EE716F2DB430090FAD1 /* Chipmunk-iPhone */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Chipmunk-iPhone"; sourceTree = SOURCE_ROOT; };
+		6EEA44F416F4C1D4007E40BA /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		6EEA44F516F4C1D4007E40BA /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E1C8EC016F2B0430090FAD1 /* libChipmunk-iPhone.a in Frameworks */,
 				6E1C8EBA16F2AA9A0090FAD1 /* QuartzCore.framework in Frameworks */,
 				6E1C8E9716F2A9640090FAD1 /* UIKit.framework in Frameworks */,
 				6E1C8E9916F2A9640090FAD1 /* Foundation.framework in Frameworks */,
@@ -116,7 +118,6 @@
 		6E1C8E9516F2A9640090FAD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6E1C8EBF16F2B0430090FAD1 /* libChipmunk-iPhone.a */,
 				6E1C8EB916F2AA9A0090FAD1 /* QuartzCore.framework */,
 				6E1C8E9616F2A9640090FAD1 /* UIKit.framework */,
 				6E1C8E9816F2A9640090FAD1 /* Foundation.framework */,
@@ -149,6 +150,7 @@
 				6E1C8EA816F2A9640090FAD1 /* Default.png */,
 				6E1C8EAA16F2A9640090FAD1 /* Default@2x.png */,
 				6E1C8EAC16F2A9640090FAD1 /* Default-568h@2x.png */,
+				6E1C8EE716F2DB430090FAD1 /* Chipmunk-iPhone */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,6 +202,8 @@
 			children = (
 				6E1C8EDE16F2B1040090FAD1 /* CASprite.h */,
 				6E1C8EDF16F2B1050090FAD1 /* CASprite.m */,
+				6EEA44F416F4C1D4007E40BA /* GameView.h */,
+				6EEA44F516F4C1D4007E40BA /* GameView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -274,6 +278,7 @@
 				6E1C8EDB16F2B0DE0090FAD1 /* block_grey_plain.png in Resources */,
 				6E1C8EDC16F2B0DE0090FAD1 /* cloud_1.png in Resources */,
 				6E1C8EDD16F2B0DE0090FAD1 /* coin.png in Resources */,
+				6E1C8EE816F2DB430090FAD1 /* Chipmunk-iPhone in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +295,7 @@
 				6E1C8EBD16F2AC970090FAD1 /* Level.m in Sources */,
 				6E1C8EE016F2B1060090FAD1 /* CASprite.m in Sources */,
 				6E1C8EE416F2B30E0090FAD1 /* GameObject.m in Sources */,
+				6EEA44F616F4C1D4007E40BA /* GameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +418,7 @@
 				6E1C8EB216F2A9640090FAD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

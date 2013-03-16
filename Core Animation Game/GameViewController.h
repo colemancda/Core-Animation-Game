@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "../Chipmunk-iPhone/chipmunk.h"
+#import "GameView.h"
 @class Level;
 
-@interface GameViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIView *gameView;
+@interface GameViewController : UIViewController <GameViewDataSourceProtocol>
+{
+    NSMutableArray *_gameObjects;
+}
+
+@property (strong, nonatomic) IBOutlet GameView *gameView;
+
+@property cpSpace *space;
 
 -(void)loadLevel:(Level *)level;
 

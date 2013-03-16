@@ -12,6 +12,7 @@
 
 @property CGPoint position;
 
+@property CGImageRef image;
 
 
 @end
