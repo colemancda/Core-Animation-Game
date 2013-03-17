@@ -38,6 +38,7 @@
 		6E1C8EE416F2B30E0090FAD1 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C8EE316F2B30E0090FAD1 /* GameObject.m */; };
 		6EEA44F616F4C1D4007E40BA /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA44F516F4C1D4007E40BA /* GameView.m */; };
 		6EEA450C16F5311C007E40BA /* libChipmunkPro-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEA450A16F5311C007E40BA /* libChipmunkPro-iPhone.a */; };
+		6EEA452B16F609FB007E40BA /* LevelStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA452A16F609FA007E40BA /* LevelStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,8 @@
 		6EEA452516F53179007E40BA /* cpSimpleMotor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpSimpleMotor.h; path = "ChipmunkPro-iPhone-Trial/chipmunk/constraints/cpSimpleMotor.h"; sourceTree = "<group>"; };
 		6EEA452616F53179007E40BA /* cpSlideJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cpSlideJoint.h; path = "ChipmunkPro-iPhone-Trial/chipmunk/constraints/cpSlideJoint.h"; sourceTree = "<group>"; };
 		6EEA452716F53179007E40BA /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = "ChipmunkPro-iPhone-Trial/chipmunk/constraints/util.h"; sourceTree = "<group>"; };
+		6EEA452916F609F8007E40BA /* LevelStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelStore.h; sourceTree = "<group>"; };
+		6EEA452A16F609FA007E40BA /* LevelStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,7 @@
 			children = (
 				6E1C8EA516F2A9640090FAD1 /* AppDelegate.h */,
 				6E1C8EA616F2A9640090FAD1 /* AppDelegate.m */,
+				6EEA452C16F609FF007E40BA /* Stores */,
 				6E1C8EE116F2B1CF0090FAD1 /* Views */,
 				6E1C8EBE16F2ACA00090FAD1 /* Models */,
 				6E1C8EB816F2AA070090FAD1 /* Controllers */,
@@ -316,6 +320,15 @@
 			name = constraints;
 			sourceTree = "<group>";
 		};
+		6EEA452C16F609FF007E40BA /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				6EEA452916F609F8007E40BA /* LevelStore.h */,
+				6EEA452A16F609FA007E40BA /* LevelStore.m */,
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,6 +416,7 @@
 				6E1C8EE016F2B1060090FAD1 /* CASprite.m in Sources */,
 				6E1C8EE416F2B30E0090FAD1 /* GameObject.m in Sources */,
 				6EEA44F616F4C1D4007E40BA /* GameView.m in Sources */,
+				6EEA452B16F609FB007E40BA /* LevelStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

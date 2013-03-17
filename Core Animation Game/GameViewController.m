@@ -27,14 +27,11 @@
     // TEMP
     Level *level1 = [[Level alloc] init];
     GameObject *monkey = [[GameObject alloc] init];
-    monkey.position = self.gameView.center;
     monkey.imageFileName = @"monkey_1";
+    monkey.position = self.gameView.center;
     [level1 addObject:monkey];
     
     [self loadLevel:level1];
-    
-    [level1 startChipmunk];
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -58,6 +55,8 @@
     // start animations
     [self.gameView startAnimation];
     
+    // start chipmunk
+    [_level startChipmunk];    
 }
 
 
@@ -82,7 +81,7 @@
         return image;
     }
     
-    else return 0;
+    else return nil;
     
 }
 
@@ -91,7 +90,12 @@
     if (gameView == self.gameView) {
         
         GameObject *gameObject = _level.objects[index];
-        return gameObject.position;
+        
+        // convert chipmunk coordinate to UIKit coordinates (flip Y)
+        CGPoint chipmunkPoint = gameObject.position;
+        CGPoint convertedPoint = CGPointMake(chipmunkPoint.x, self.gameView.bounds.size.height - chipmunkPoint.y);
+        
+        return convertedPoint;
     }
     
     else return CGPointZero;

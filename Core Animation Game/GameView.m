@@ -21,15 +21,6 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
 -(void)reloadData
 {
     NSInteger objectCount = [self.dataSource numberOfGameObjectsForGameView:self];
@@ -41,6 +32,10 @@
             
             // create sprite
             CALayer *sprite = [CALayer layer];
+            
+            // set initial position
+            sprite.position = [self.dataSource gameView:self
+                            positionOfGameObjectAtIndex:i];
             
             // add to array
             [tempMutArray addObject:sprite];
@@ -70,6 +65,7 @@
         
         // set new image if image has changed
         if (sprite.contents != (__bridge id)(newImage)) {
+            
             // set the new image
             sprite.contents = (__bridge id)(newImage);
             

@@ -24,7 +24,7 @@ NSString *const kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType
         
         // initialize variables
         _objects = [[NSMutableArray alloc] init];
-        
+                
         // create the chipmunk space
         _space = [[ChipmunkSpace alloc] init];
         
@@ -36,7 +36,16 @@ NSString *const kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType
                     group:CP_NO_GROUP
             collisionType:kSpaceBoundingBoxCollisionType];
         
-        _space.gravity = CGPointMake(0.0, -100);
+        _space.gravity = CGPointMake(0.0, -10);
+        
+        // collision handlers
+        [_space addCollisionHandler:self
+                              typeA:[GameObject class]
+                              typeB:kSpaceBoundingBoxCollisionType
+                              begin:@selector(objectHitSpaceBox)
+                           preSolve:nil
+                          postSolve:nil
+                           separate:nil];
         
     }
     return self;
@@ -77,8 +86,15 @@ NSString *const kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType
     ChipmunkShape *shape = [ChipmunkPolyShape boxWithBody:body
                                                     width:size.width
                                                    height:size.height];
+    // add shape to space
+    [_space addShape:shape];
+    
     shape.friction = 0.8;
     shape.elasticity = 0.1;
+    
+    shape.collisionType = object.class;
+    shape.group = CP_NO_GROUP;
+    
 }
 
 #pragma mark - Chipmunk Simulations
@@ -99,6 +115,8 @@ NSString *const kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType
 
 -(void)simulate
 {
+    [_space step:1.0/30];
+    
     // update model objects with chipmunk's body properties
     for (ChipmunkBody *body in _space.bodies) {
         
@@ -107,9 +125,13 @@ NSString *const kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType
         
         // update properties
         object.position = body.pos;
-        
-        NSLog(@"new position %@", NSStringFromCGPoint(body.pos));
     }
+}
+
+-(int)objectHitSpaceBox
+{
+    // should collide?
+    return YES;
 }
 
 #pragma mark - Properties

@@ -34,5 +34,7 @@
 -(CGPoint)gameView:(GameView *)gameView positionOfGameObjectAtIndex:(NSInteger)index;
 
 -(CGImageRef)gameView:(GameView *)gameView imageOfGameObjectAtIndex:(NSInteger)index;
-  
+
+// -(CGAffineTransform)gameView:(GameView *)gameView affineTransformOfGameObjectAtIndex:(NSInteger)index;
+
 @end
