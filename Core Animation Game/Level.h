@@ -7,13 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ChipmunkPro-iPhone-Trial/ObjectiveChipmunk.h"
+#import "ObjectiveChipmunk.h"
+@class GameObject;
 
 @interface Level : NSObject
 {
     ChipmunkSpace *_space;
+    
+    NSMutableArray *_objects;
+    
+    CADisplayLink *_timer;
 }
 
-@property NSMutableArray *objects;
+@property (readonly) NSArray *objects;
+
+-(void)startChipmunk;
+
+-(void)stopChipmunk;
+
+-(void)simulate;
+
+-(void)addObject:(GameObject *)object;
+
 
 @end

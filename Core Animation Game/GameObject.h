@@ -14,6 +14,4 @@
 
 @property NSString *imageFileName;
 
-@property CGAffineTransform transform;
-
 @end

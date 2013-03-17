@@ -29,9 +29,11 @@
     GameObject *monkey = [[GameObject alloc] init];
     monkey.position = self.gameView.center;
     monkey.imageFileName = @"monkey_1";
-    [level1.objects addObject:monkey];
+    [level1 addObject:monkey];
     
     [self loadLevel:level1];
+    
+    [level1 startChipmunk];
     
 }
 
