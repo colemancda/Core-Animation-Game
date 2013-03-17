@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "GameViewController.h"
+#import "MenuViewController.h"
 
 @implementation AppDelegate
 
@@ -19,8 +19,8 @@
     [self.window makeKeyAndVisible];
     
     // navigation controller
-    GameViewController *gameVC = [[GameViewController alloc] init];
-    _navigationController = [[UINavigationController alloc] initWithRootViewController:gameVC];
+    MenuViewController *menuVC = [[MenuViewController alloc] init];
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:menuVC];
     
     [self.window setRootViewController:_navigationController];
     

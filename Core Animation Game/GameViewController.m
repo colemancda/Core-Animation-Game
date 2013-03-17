@@ -23,15 +23,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    // TEMP
-    Level *level1 = [[Level alloc] init];
-    GameObject *monkey = [[GameObject alloc] init];
-    monkey.imageFileName = @"monkey_1";
-    monkey.position = self.gameView.center;
-    [level1 addObject:monkey];
-    
-    [self loadLevel:level1];
 }
 
 -(void)viewDidAppear:(BOOL)animated

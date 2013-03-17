@@ -39,6 +39,10 @@
 		6EEA44F616F4C1D4007E40BA /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA44F516F4C1D4007E40BA /* GameView.m */; };
 		6EEA450C16F5311C007E40BA /* libChipmunkPro-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEA450A16F5311C007E40BA /* libChipmunkPro-iPhone.a */; };
 		6EEA452B16F609FB007E40BA /* LevelStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA452A16F609FA007E40BA /* LevelStore.m */; };
+		6EEA453016F610EF007E40BA /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA452E16F610EF007E40BA /* MenuViewController.m */; };
+		6EEA453116F610EF007E40BA /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EEA452F16F610EF007E40BA /* MenuViewController.xib */; };
+		6EEA453716F61164007E40BA /* LevelPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEA453516F61164007E40BA /* LevelPickerViewController.m */; };
+		6EEA453816F61164007E40BA /* LevelPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EEA453616F61164007E40BA /* LevelPickerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +129,12 @@
 		6EEA452716F53179007E40BA /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util.h; path = "ChipmunkPro-iPhone-Trial/chipmunk/constraints/util.h"; sourceTree = "<group>"; };
 		6EEA452916F609F8007E40BA /* LevelStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelStore.h; sourceTree = "<group>"; };
 		6EEA452A16F609FA007E40BA /* LevelStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelStore.m; sourceTree = "<group>"; };
+		6EEA452D16F610EF007E40BA /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		6EEA452E16F610EF007E40BA /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		6EEA452F16F610EF007E40BA /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		6EEA453416F61164007E40BA /* LevelPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelPickerViewController.h; sourceTree = "<group>"; };
+		6EEA453516F61164007E40BA /* LevelPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelPickerViewController.m; sourceTree = "<group>"; };
+		6EEA453616F61164007E40BA /* LevelPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelPickerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,9 +214,9 @@
 		6E1C8EB816F2AA070090FAD1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6E1C8EB316F2A98B0090FAD1 /* GameViewController.h */,
-				6E1C8EB416F2A98B0090FAD1 /* GameViewController.m */,
-				6E1C8EB516F2A98B0090FAD1 /* GameViewController.xib */,
+				6EEA453216F610FD007E40BA /* Menu */,
+				6EEA453916F6116A007E40BA /* LevelPicker */,
+				6EEA453316F61104007E40BA /* Game */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +339,36 @@
 			name = Stores;
 			sourceTree = "<group>";
 		};
+		6EEA453216F610FD007E40BA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				6EEA452D16F610EF007E40BA /* MenuViewController.h */,
+				6EEA452E16F610EF007E40BA /* MenuViewController.m */,
+				6EEA452F16F610EF007E40BA /* MenuViewController.xib */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		6EEA453316F61104007E40BA /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				6E1C8EB316F2A98B0090FAD1 /* GameViewController.h */,
+				6E1C8EB416F2A98B0090FAD1 /* GameViewController.m */,
+				6E1C8EB516F2A98B0090FAD1 /* GameViewController.xib */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		6EEA453916F6116A007E40BA /* LevelPicker */ = {
+			isa = PBXGroup;
+			children = (
+				6EEA453416F61164007E40BA /* LevelPickerViewController.h */,
+				6EEA453516F61164007E40BA /* LevelPickerViewController.m */,
+				6EEA453616F61164007E40BA /* LevelPickerViewController.xib */,
+			);
+			name = LevelPicker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,6 +439,8 @@
 				6E1C8EDB16F2B0DE0090FAD1 /* block_grey_plain.png in Resources */,
 				6E1C8EDC16F2B0DE0090FAD1 /* cloud_1.png in Resources */,
 				6E1C8EDD16F2B0DE0090FAD1 /* coin.png in Resources */,
+				6EEA453116F610EF007E40BA /* MenuViewController.xib in Resources */,
+				6EEA453816F61164007E40BA /* LevelPickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +459,8 @@
 				6E1C8EE416F2B30E0090FAD1 /* GameObject.m in Sources */,
 				6EEA44F616F4C1D4007E40BA /* GameView.m in Sources */,
 				6EEA452B16F609FB007E40BA /* LevelStore.m in Sources */,
+				6EEA453016F610EF007E40BA /* MenuViewController.m in Sources */,
+				6EEA453716F61164007E40BA /* LevelPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +540,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core Animation Game/Core Animation Game-Prefix.pch";
 				INFOPLIST_FILE = "Core Animation Game/Core Animation Game-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../3rd party projects/Chipmunk-Physics/xcode/Chipmunk-iPhone\"",
@@ -512,6 +557,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core Animation Game/Core Animation Game-Prefix.pch";
 				INFOPLIST_FILE = "Core Animation Game/Core Animation Game-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../3rd party projects/Chipmunk-Physics/xcode/Chipmunk-iPhone\"",
