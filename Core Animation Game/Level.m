@@ -36,7 +36,7 @@ NSString *const kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType
                     group:CP_NO_GROUP
             collisionType:kSpaceBoundingBoxCollisionType];
         
-        _space.gravity = CGPointMake(0.0, -10);
+        _space.gravity = CGPointMake(0.0, -100);
         
         // collision handlers
         [_space addCollisionHandler:self
@@ -82,6 +82,9 @@ NSString *const kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType
     // set the initial position
     body.pos = object.position;
     
+    // set the angle
+    body.angle = object.angle;
+    
     // create shape
     ChipmunkShape *shape = [ChipmunkPolyShape boxWithBody:body
                                                     width:size.width
@@ -125,6 +128,7 @@ NSString *const kSpaceBoundingBoxCollisionType = @"SpaceBoundingBoxCollisionType
         
         // update properties
         object.position = body.pos;
+        object.angle = body.angle;
     }
 }
 

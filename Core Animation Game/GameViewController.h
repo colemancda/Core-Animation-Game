@@ -19,6 +19,6 @@
 
 @property (strong, nonatomic) IBOutlet GameView *gameView;
 
--(void)loadLevel:(Level *)level;
+- (id)initWithLevel:(Level *)level;
 
 @end

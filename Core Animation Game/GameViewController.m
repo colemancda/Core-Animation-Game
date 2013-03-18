@@ -19,6 +19,28 @@
 
 @implementation GameViewController
 
+- (id)initWithLevel:(Level *)level
+{
+    self = [super init];
+    if (self) {
+        
+        // set value
+        _level = level;
+        
+    }
+    return self;
+}
+
+- (id)init
+{
+    [NSException raise:@"Wrong initialization method"
+                format:@"You cannot use %@ with %@, you have to use %@",
+     NSStringFromSelector(@selector(init)),
+     self,
+     NSStringFromSelector(@selector(initWithLevel:))];
+    return nil;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -36,20 +58,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark
-
--(void)loadLevel:(Level *)level
+-(void)viewDidLayoutSubviews
 {
-    // set value
-    _level = level;
-    
     // start animations
     [self.gameView startAnimation];
     
     // start chipmunk
-    [_level startChipmunk];    
+    [_level startChipmunk];
 }
-
 
 #pragma mark - GameViewDataSource Protocol
 
@@ -84,12 +100,33 @@
         
         // convert chipmunk coordinate to UIKit coordinates (flip Y)
         CGPoint chipmunkPoint = gameObject.position;
-        CGPoint convertedPoint = CGPointMake(chipmunkPoint.x, self.gameView.bounds.size.height - chipmunkPoint.y);
-        
+        CGPoint convertedPoint = CGPointMake(chipmunkPoint.x,
+                                             self.gameView.bounds.size.height - chipmunkPoint.y);        
         return convertedPoint;
     }
     
     else return CGPointZero;
+}
+
+-(CGFloat)gameView:(GameView *)gameView angleOfGameObjectAtIndex:(NSInteger)index
+{
+    if (gameView == self.gameView) {
+        
+        GameObject *gameObject = _level.objects[index];
+        return gameObject.angle;
+    }
+    
+    else return 0.0;
+}
+
+-(BOOL)gameView:(GameView *)gameView drawBoundingBoxOfGameObjectAtIndex:(NSInteger)index
+{
+    if (gameView == self.gameView) {
+        
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end

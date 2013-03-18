@@ -59,6 +59,12 @@
         sprite.position = [self.dataSource gameView:self
                         positionOfGameObjectAtIndex:index];
         
+        // set angle
+        CGFloat angle = [self.dataSource gameView:self
+                         angleOfGameObjectAtIndex:index];
+        
+        sprite.affineTransform = CGAffineTransformMakeRotation(angle);
+        
         // get the image
         CGImageRef newImage = [self.dataSource gameView:self
                                imageOfGameObjectAtIndex:index];
@@ -79,6 +85,23 @@
                                        CGImageGetHeight(newImage) / scale);
             sprite.frame = newFrame;
         }
+        
+        /*
+        // if dataSource responds to 'drawBoundingBox'
+        if ([self.dataSource respondsToSelector:@selector(gameView:drawBoundingBoxOfGameObjectAtIndex:)]) {
+            
+            // if the dataSource wants to draw boundingBoxes
+            if ([self.dataSource gameView:self
+                drawBoundingBoxOfGameObjectAtIndex:index]) {
+                
+                // draw bounding box
+                UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRect:sprite.bounds];
+                [[UIColor blackColor] setStroke];
+                [bezierPath stroke];
+            }
+        }
+         */
+        
     }
 }
 

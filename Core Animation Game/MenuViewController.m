@@ -7,7 +7,9 @@
 //
 
 #import "MenuViewController.h"
-#import "LevelPickerViewController.h"
+#import "GameViewController.h"
+#import "Level.h"
+#import "LevelStore.h"
 
 @interface MenuViewController ()
 
@@ -47,7 +49,9 @@
 #pragma mark Buttons
 - (IBAction)play:(id)sender {
     
-    [self.navigationController pushViewController:[[LevelPickerViewController alloc] init]
+    GameViewController *gameVC = [[GameViewController alloc] initWithLevel:[[LevelStore sharedStore] level:1]];
+        
+    [self.navigationController pushViewController:gameVC
                                          animated:YES];
     
 }

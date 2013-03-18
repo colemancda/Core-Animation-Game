@@ -37,6 +37,17 @@
         
         Level *level1 = [[Level alloc] init];
         
+        GameObject *monkey = [[GameObject alloc] init];
+        monkey.imageFileName = @"monkey_1";
+        monkey.position = CGPointMake(200, 200);
+        [level1 addObject:monkey];
+        
+        GameObject *coin = [[GameObject alloc] init];
+        coin.imageFileName = @"coin";
+        coin.position = CGPointMake(120, 300);
+        [level1 addObject:coin];
+        
+        [tempMutArray addObject:level1];
         
         // end of creating levels //
         

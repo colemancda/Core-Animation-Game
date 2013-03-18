@@ -35,6 +35,10 @@
 
 -(CGImageRef)gameView:(GameView *)gameView imageOfGameObjectAtIndex:(NSInteger)index;
 
-// -(CGAffineTransform)gameView:(GameView *)gameView affineTransformOfGameObjectAtIndex:(NSInteger)index;
+-(CGFloat)gameView:(GameView *)gameView angleOfGameObjectAtIndex:(NSInteger)index;
+
+@optional
+
+-(BOOL)gameView:(GameView *)gameView drawBoundingBoxOfGameObjectAtIndex:(NSInteger)index;
 
 @end

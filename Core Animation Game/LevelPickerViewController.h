@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LevelPickerViewController : UIViewController <UIPageViewControllerDataSource>
+@interface LevelPickerViewController : UIPageViewController <UIPageViewControllerDataSource>
+
+@property (strong, nonatomic) IBOutlet UIPageViewController *pageViewController;
+
 
 @end
